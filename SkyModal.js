@@ -9,7 +9,7 @@
             var defaults = {
                 top: 100,
                 overlay: 0.5
-            }
+            };
             var overlay = $("<div id='SkyOverlay'></div>");
             $("body").append(overlay);
         },
@@ -26,11 +26,11 @@
             var defaults = {
                 top: 100,
                 overlay: 0.5
-            }
+            };
             var modal_H = $(this).outerHeight();
             var modal_W = $(this).outerWidth();
             var overlay_zindex = $('#SkyOverlay').css('z-index');
-            var modal_zindex = parseInt(overlay_zindex) + 10;
+            var modal_zindex = parseInt(overlay_zindex,10) + 10;
             $('#SkyOverlay').css({"display": "block", opacity: 0});
             $('#SkyOverlay').fadeTo(200, defaults.overlay);
             $(this).css({
@@ -46,7 +46,7 @@
             $('#SkyOverlay').click(function (e) {
                 $('#SkyOverlay').SkyModal_Close();
                 e.preventDefault();
-            })
+            });
         }
     });
 
